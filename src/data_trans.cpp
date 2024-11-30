@@ -1,7 +1,7 @@
 #include "../include/data_trans.h"
 
 std::vector<int> RootSelector::get_root_list(
-    std::vector<Root> root_list,
+    std::vector<Route> root_list,
     std::vector<int> node_list
 ){
     std::vector<int> retlist;
@@ -20,7 +20,7 @@ std::vector<int> RootSelector::get_root_list(
 }
 
 int RootSelector::_get_root_id(
-    std::vector<Root> root_list,
+    std::vector<Route> root_list,
     int from_node_index,
     int to_node_index
 ){

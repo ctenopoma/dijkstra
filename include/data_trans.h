@@ -5,11 +5,12 @@
 
 using namespace std;
 
-struct Root
+struct Route
 {
     int root_id;
     int from_node_index;
     int to_node_index;
+    float length;
 };
 
 class RootSelector
@@ -17,12 +18,12 @@ class RootSelector
 public:
 // functions
     static std::vector<int> get_root_list(
-        std::vector<Root> root_list,
+        std::vector<Route> root_list,
         std::vector<int> node_list
     );
 private:
     static int _get_root_id(
-        std::vector<Root> root_list,
+        std::vector<Route> root_list,
         int from_node_index,
         int to_node_index
     );
